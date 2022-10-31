@@ -1,0 +1,24 @@
+{
+  "navigation": [
+    {
+      "id": 1,
+      "title": "Servicios",
+      "url": "/servicios"
+    },
+    {
+      "id": 2,
+      "title": "Conóceme",
+      "url": "/conoceme"
+    },
+    {
+      "id": 3,
+      "title": "Proyectos",
+      "url": "/proyectos"
+    },
+    {
+      "id": 4,
+      "title": "Contacto",
+      "url": "/contacto"
+    }
+  ]
+}

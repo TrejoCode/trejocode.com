@@ -1,0 +1,7 @@
+/**
+ * Global CSS - Cargar todos los estilos
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

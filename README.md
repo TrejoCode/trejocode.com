@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Trejocode](https://res.cloudinary.com/trejocode/image/upload/v1586298449/Trejocode/logo_t0otlj.png)
 
-## Getting Started
+# 🌐 Trejocode.com - Sitio Web
 
-First, run the development server:
+Sitio Web oficial de trejocode.com - Construido en Next.js y servido estáticamente 📄
+
+---
+
+Trejocode.com Official Website - Built in Next.js and statically served
+
+<img width="860" src="https://res.cloudinary.com/trejocode/image/upload/v1596647419/Trejocode/trejocode-dark_l8b32y.gif" />
+
+### 🏷️ Características / Features
+
+- Carga de imágenes difereidas / Lazy Load for Images
+- Optimizado para SEO / SEO Ready
+- Esenciales WCAG 2.1 para la accesibilidad Web / Essential WCAG 2.1 for Web accessibility
+- Dark Theme Inicial / Basic Dark Theme
+- Ruteador / Router
+- Cliente HTTP / HTTP Client
+- PWA Listo / PWA Ready
+- SASS precargado / SASS incorporated
+- NProgress Loader
+- Código documentado / Documented code
+- Estructura de carpetas / Folder structure
+- Última versión mayor de React y Next.js / React and Next.js latest version.
+
+### 🚀 Para empezar / Get started
+
+Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo. Consulte la sección de implementación para obtener notas sobre cómo desplegar el proyecto en producción.
+
+---
+
+These instructions will provide you with a copy of the running project on your local machine for development purposes. See the implementation section for notes on how to deploy the project into production.
 
 ```bash
+cd web
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 📐 Requisitos / Requirements
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Node min: 16
+- Web Browser
+- Text Editor
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### 📦 Construido con / Build with
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [Next.js](https://nextjs.org)
+- [React Cool Img](https://www.npmjs.com/package/react-cool-img)
+- [Trejocode UIKit](https://www.npmjs.com/package/react-cool-img)
 
-## Learn More
+### 🤝 Colaboradores / Collaborators
 
-To learn more about Next.js, take a look at the following resources:
+<table>
+  <tr>
+    <td align="center"><a href="https://www.trejocode.com"><img src="https://avatars1.githubusercontent.com/u/16879799?s=460&u=eb7ea04180a48e1069862102426992cd591df9cc&v=4" width="100px;" alt="Trejito code"/><br /><sub><b>Trejocode</b></sub></a><br /><a href="https://github.com/TrejoCode/upqroo/commits?author=TrejoCode" title="Design">🎨</a> <a href="#" title="Code">💻</a> <a href="#" title="Project Management">📆</a></td>
+  </tr>
+</table>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Licencia
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Este proyecto está licenciado bajo la Licencia MIT - vea el archivo [LICENSE.md](LICENSE.md) para más detalles.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License - see the file [LICENSE.md](LICENSE.md) for more details.
