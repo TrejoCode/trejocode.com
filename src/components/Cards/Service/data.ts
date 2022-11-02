@@ -160,7 +160,7 @@ export const CARDS_DATA: InterfaceCardProps[] = [
     icon: ImageMobile,
     title: 'Mobile Apps',
     description:
-      'Para que el sitio Web sobresalga entre las demás, debe contar con un diseño innovador y atrayente, con ello transmitirá de la mejor forma lo grandioso del proyecto.',
+      'Piensa en móvil, un mercado cargado de posibilidades. Apps que funcionen como extensión de tu sistema o como un producto independiente, las tecnologías híbridas permiten generar 2 Apps nativas, Android e IOS con una misma base.',
     btnLabel: 'Explorar apps móviles',
     icons: [
       {

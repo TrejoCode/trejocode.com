@@ -7,7 +7,7 @@ import { Button } from '@trejocode/uikit';
 import { InterfaceCardProps } from './index.types';
 
 const CardService = ({ icon, title, description, btnLabel, icons, color }: InterfaceCardProps): JSX.Element => (
-  <div className="card w-4/5 flex flex-col bg-white py-12 px-10 rounded-3xl shadow">
+  <div className="card w-full xl:w-4/5 flex flex-col bg-white py-8 md:py-12 px-6 md:px-10 rounded-3xl rounded-tl-none rounded-tr-none xl:rounded-tl-3xl xl:rounded-tr-3xl shadow">
     <div className={`icon flex justify-center items-center w-14 h-14 rounded-full bg-${color}-base mb-5`}>
       <Image src={icon} alt={title} />
     </div>
