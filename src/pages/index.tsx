@@ -5,6 +5,7 @@
 import PageLayout from 'components/Layout';
 import Banner from 'components/Home/Banner';
 import Services from 'components/Home/Services';
+import About from 'components/Home/About';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
             </div>
           </div>
           <Services />
+          <About />
         </main>
       </PageLayout>
     </div>
