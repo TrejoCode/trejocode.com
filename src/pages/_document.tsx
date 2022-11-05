@@ -13,7 +13,7 @@ class CustomDocument extends Document {
 
   render(): JSX.Element {
     return (
-      <Html lang="es_MX">
+      <Html lang="es-MX">
         <Head>
           {/** Common meta data */}
           <meta charSet="utf-8" />

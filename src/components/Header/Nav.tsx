@@ -54,7 +54,7 @@ const Nav = (): JSX.Element => {
         </button>
         <div
           className={`flex ${
-            openMenu && 'z-10 w-full flex-col fixed min-h-screen bg-secondary-base top-0 left-0'
+            openMenu && 'fadeIn z-10 w-full flex-col fixed min-h-screen bg-secondary-base top-0 left-0'
           } md:static md:flex-row md:min-h-max`}
         >
           {openMenu && (

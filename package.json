@@ -15,6 +15,7 @@
     "@fontsource/ibm-plex-sans": "^4.5.13",
     "@splitbee/web": "^0.3.0",
     "@trejocode/uikit": "^0.1.4",
+    "classnames": "^2.3.2",
     "next": "13.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
