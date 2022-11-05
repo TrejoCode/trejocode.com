@@ -6,6 +6,7 @@ import PageLayout from 'components/Layout';
 import Banner from 'components/Home/Banner';
 import Services from 'components/Home/Services';
 import About from 'components/Home/About';
+import Projects from 'components/Home/Projects';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
           </div>
           <Services />
           <About />
+          <Projects />
         </main>
       </PageLayout>
     </div>

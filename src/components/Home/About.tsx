@@ -7,7 +7,7 @@ import { Icon } from '@trejocode/uikit';
 import ImageMe from 'assets/images/me.jpg';
 
 const About = (): JSX.Element => (
-  <div className="w-full flex justify-center bg-white py-16 pb-6 lg:pb-0 lg:py-24">
+  <div className="w-full flex justify-center bg-white py-16 pb-6 lg:py-24">
     <div className="container flex flex-col">
       <div className="flex flex-col lg:flex-row w-full">
         <div className="w-full lg:w-2/5 xl:w-1/2 flex justify-center items-center mb-8 lg:mb-0">

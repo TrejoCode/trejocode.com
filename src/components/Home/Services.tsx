@@ -2,7 +2,7 @@
  * @description Componente <Services /> de la página de inicio
  */
 
-import CardService from 'components/Cards/Service/CardService';
+import CardService from 'components/Cards/Service';
 import { CARDS_DATA } from 'components/Cards/Service/data';
 
 const Services = (): JSX.Element => (
