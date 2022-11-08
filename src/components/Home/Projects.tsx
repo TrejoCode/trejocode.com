@@ -14,7 +14,7 @@ const Projects = (): JSX.Element => {
   const [limit, setLimit] = useState<number>(INITIAL_LIMIT);
 
   return (
-    <div className="w-full flex justify-center bg-[#EBF3F5] py-16 pb-6 lg:py-24">
+    <div className="w-full flex justify-center bg-[#EBF3F5] py-16 pb-6 lg:py-24 lg:pb-4">
       <div className="container flex flex-col">
         <div className="flex flex-col mb-16">
           <h2 className="text-center text-5xl font-bold xl:text-display-4 text-secondary-base mb-4">

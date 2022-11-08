@@ -33,6 +33,7 @@ const PageLayout = ({
         <meta name="twitter:image" content={image} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <Header />
       {children}
