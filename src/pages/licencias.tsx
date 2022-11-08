@@ -6,7 +6,7 @@ import PageLayout from 'components/Layout';
 import { Icon } from '@trejocode/uikit';
 import { LICENSES_DATA, InterfaceLicense } from 'data/licenses';
 
-const PageLicences = (): JSX.Element => (
+const PageLicenses = (): JSX.Element => (
   <div className="w-full">
     <PageLayout title="Licencias de código abierto y agradecimientos">
       <main className="w-full">
@@ -52,4 +52,4 @@ const PageLicences = (): JSX.Element => (
   </div>
 );
 
-export default PageLicences;
+export default PageLicenses;
