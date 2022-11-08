@@ -6,7 +6,7 @@ import PageLayout from 'components/Layout';
 
 const PagePolicies = (): JSX.Element => (
   <div className="w-full">
-    <PageLayout>
+    <PageLayout title="Políticas y privacidad">
       <main className="w-full">
         <div className="flex justify-center">
           <div className="container flex flex-col my-16 text-secondary-base text-justify">
