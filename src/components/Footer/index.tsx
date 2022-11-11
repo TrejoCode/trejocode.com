@@ -140,15 +140,15 @@ const Footer = (): JSX.Element => {
             <span className="text-white text-lg font-medium mb-2">Soporte</span>
             <Link
               href="/contacto"
-              className="flex items-center text-white font-semibold text-base mr-3 outline-2 focus:outline-dashed focus:outline-white rounded my-1"
+              className="flex items-center text-white font-semibold text-base md:mr-3 outline-2 focus:outline-dashed focus:outline-white rounded my-1"
             >
-              <span className="mr-1">Contacto</span>
+              Contacto
             </Link>
             <Link
               href="/licencias"
-              className="flex items-center text-white font-semibold text-base mr-3 outline-2 focus:outline-dashed focus:outline-white rounded my-1"
+              className="flex items-center text-white font-semibold text-base md:mr-3 outline-2 focus:outline-dashed focus:outline-white rounded my-1"
             >
-              <span className="mr-1">Licencias de código abierto</span>
+              Licencias de código abierto
             </Link>
           </div>
         </div>
