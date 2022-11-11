@@ -19,7 +19,7 @@ const PageLayout = ({
     <div className="page">
       <Head>
         {/** General */}
-        <title>{title}</title>
+        <title>{title ? `${title} - Trejocode` : 'Trejocode - Desarrollo de aplicaciones Web y móviles'}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,6 +33,7 @@ const PageLayout = ({
         <meta name="twitter:image" content={image} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <Header />
       {children}

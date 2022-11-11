@@ -3,7 +3,7 @@
   "name": "Trejocode",
   "icons": [
     {
-      "src": "img/icons/icon-32.png",
+      "src": "/img/icons/icon-32.png",
       "type": "image/png",
       "sizes": "32x32"
     },
@@ -33,5 +33,6 @@
   "lang": "es-MX",
   "display": "standalone",
   "theme_color": "#3E816D",
-  "background_color": "#FFFFFF"
+  "background_color": "#FFFFFF",
+  "description": "Trejocode - Desarrollo de aplicaciones Web y móviles"
 }

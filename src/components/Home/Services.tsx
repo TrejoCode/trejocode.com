@@ -6,7 +6,7 @@ import CardService from 'components/Cards/Service';
 import { CARDS_DATA } from 'components/Cards/Service/data';
 
 const Services = (): JSX.Element => (
-  <div className="w-full flex justify-center bg-[#EBF3F5] pt-24">
+  <div className="w-full flex justify-center bg-[#EBF3F5] pt-24" id="soluciones">
     <div className="container flex flex-col">
       <div className="flex flex-col mb-24 xl:mb-32">
         <h2 className="text-center text-5xl font-bold xl:text-display-4 text-secondary-base mb-4">

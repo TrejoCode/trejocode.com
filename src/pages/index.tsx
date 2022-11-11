@@ -7,6 +7,7 @@ import Banner from 'components/Home/Banner';
 import Services from 'components/Home/Services';
 import About from 'components/Home/About';
 import Projects from 'components/Home/Projects';
+import Contact from 'components/Home/Contact';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           <Services />
           <About />
           <Projects />
+          <Contact />
         </main>
       </PageLayout>
     </div>
