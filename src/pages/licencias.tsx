@@ -9,7 +9,7 @@ import { LICENSES_DATA, InterfaceLicense } from 'data/licenses';
 const PageLicenses = (): JSX.Element => (
   <div className="w-full">
     <PageLayout title="Licencias de código abierto y agradecimientos">
-      <main className="w-full">
+      <main className="w-full bg-[#EBF3F5]">
         <div className="flex justify-center">
           <div className="container flex flex-col my-16 text-secondary-base text-justify">
             <h2 className="text-2xl lg:text-4xl font-semibold mb-8">LICENCIAS DE CÓDIGO ABIERTO Y AGRADECIMIENTOS</h2>

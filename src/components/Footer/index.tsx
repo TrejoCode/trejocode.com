@@ -95,7 +95,7 @@ const Footer = (): JSX.Element => {
             </div>
           </div>
           <div className="flex flex-col items-center md:items-start">
-            <span className="text-white text-lg font-medium mb-2">Enlaces útiles:</span>
+            <span className="text-white text-lg font-medium mb-2">Enlaces útiles</span>
             <Link
               href="/sitemap.xml"
               className="flex items-center text-white font-semibold text-base outline-2 focus:outline-dashed focus:outline-white rounded my-1"
@@ -137,7 +137,7 @@ const Footer = (): JSX.Element => {
             </a>
           </div>
           <div className="flex flex-col mt-6 md:mt-0 items-center md:items-start">
-            <span className="text-white text-lg font-medium mb-2">Soporte:</span>
+            <span className="text-white text-lg font-medium mb-2">Soporte</span>
             <Link
               href="/contacto"
               className="flex items-center text-white font-semibold text-base mr-3 outline-2 focus:outline-dashed focus:outline-white rounded my-1"
