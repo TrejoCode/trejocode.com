@@ -125,7 +125,7 @@ const Footer = (): JSX.Element => {
               </span>
             </a>
             <a
-              href="https://www.superprof.mx/programacion-desarrollo-web-aplicaciones-html-css-javascript-react-node-frontend-backend-desde-hasta-fullstack.html"
+              href="https://bit.ly/4cwF9xC"
               className="flex items-center text-white font-semibold text-base outline-2 focus:outline-dashed focus:outline-white rounded my-1"
               target="_blank"
               rel="follow noreferrer"

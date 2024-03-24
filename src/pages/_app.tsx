@@ -3,9 +3,9 @@
  */
 
 import type { AppProps } from 'next/app';
-import { useEffect } from 'react';
 import Script from 'next/script';
-import splitbee from '@splitbee/web';
+import posthog from 'posthog-js';
+import { PostHogProvider } from 'posthog-js/react';
 
 // Carga la fuente desde local
 import '@fontsource/ibm-plex-sans/400.css';
@@ -17,19 +17,23 @@ import '@fontsource/ibm-plex-sans/700.css';
 import '@trejocode/uikit/dist/trejocode-uikit.css';
 import 'styles/globals.css';
 
-function CustomApp({ Component, pageProps }: AppProps) {
-  // Inicializar Splitbee analytics
-  useEffect((): void => {
-    splitbee.init({
-      scriptUrl: '/bee.js',
-      apiUrl: '/_hive',
-    });
-  }, []);
+if (typeof window !== 'undefined') {
+  // checks that we are client-side
+  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
+    api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://app.posthog.com',
+    loaded: (posthog) => {
+      if (process.env.NODE_ENV === 'development') posthog.debug(); // debug mode in development
+    },
+  });
+}
 
+function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Script id="userway" data-account="cr2XyIS2q3" src="https://cdn.userway.org/widget.js" />
-      <Component {...pageProps} />
+      <PostHogProvider client={posthog}>
+        <Component {...pageProps} />
+      </PostHogProvider>
     </>
   );
 }

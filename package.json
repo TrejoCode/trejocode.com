@@ -15,10 +15,10 @@
     "@emailjs/browser": "^3.9.1",
     "@fontsource/ibm-plex-sans": "^4.5.13",
     "@hcaptcha/react-hcaptcha": "^1.4.4",
-    "@splitbee/web": "^0.3.0",
     "@trejocode/uikit": "^0.1.4",
     "classnames": "^2.3.2",
     "next": "13.0.0",
+    "posthog-js": "^1.116.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0"

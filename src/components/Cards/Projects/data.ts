@@ -32,7 +32,7 @@ export const CARDS_DATA: InterfaceCardProps[] = [
   {
     image: ImageWoonkly,
     title: 'Woonkly NFT Marketplace',
-    url: 'https://www.woonkly.com',
+    url: 'https://v3.woonkly.com',
     description:
       'La primera red social que convierte tu contenido digital en NFT, que también se puede vender en su propio Marketplace.',
     tags: [
@@ -64,6 +64,27 @@ export const CARDS_DATA: InterfaceCardProps[] = [
     ],
   },
   {
+    image: ImageUIKit,
+    title: '@trejocode/uikit',
+    url: 'https://ui.trejocode.com/',
+    description:
+      'Biblioteca de componentes UI reutilizables para proyectos personales ayuda a crear interfaces de usuario más rápido.',
+    tags: [
+      {
+        type: 'web',
+        title: 'Web',
+      },
+      {
+        type: 'infra',
+        title: 'Infraestructura',
+      },
+      {
+        type: 'open',
+        title: 'Open Source',
+      },
+    ],
+  },
+  {
     image: ImageSietemares,
     title: 'Sietemares',
     url: 'https://www.sietemares.com.mx',
@@ -81,23 +102,6 @@ export const CARDS_DATA: InterfaceCardProps[] = [
       {
         type: 'infra',
         title: 'Infraestructura',
-      },
-    ],
-  },
-  {
-    image: ImageWUIKIT,
-    title: 'Woonkly UIKit',
-    url: 'https://uikit.woonkly.com',
-    description:
-      'Woonkly UIKit es una biblioteca de componentes reutilizables que ayuda a los colaboradores de Woonkly a crear interfaces de usuario más rápido.',
-    tags: [
-      {
-        type: 'web',
-        title: 'Web',
-      },
-      {
-        type: 'design',
-        title: 'Diseño Web',
       },
     ],
   },
@@ -166,19 +170,19 @@ export const CARDS_DATA: InterfaceCardProps[] = [
     ],
   },
   {
-    image: ImageMontemar,
-    title: 'Montemar Menú',
-    url: 'https://montemar.com.mx/menu/',
+    image: ImageCopperBranch,
+    title: 'Eat Copper Branch',
+    url: 'https://www.eatcopperbranch.com',
     description:
-      'Menu interactivo, Montemar a la altura de los mejores Restaurantes de México, es el resultado de una visión mas allá de lo convencional.',
+      'Wordpress Site. Los restaurantes de Copper Branch ofrecen un menú vegano a base de plantas y superalimentos.',
     tags: [
       {
         type: 'web',
         title: 'Web',
       },
       {
-        type: 'design',
-        title: 'Diseño Web',
+        type: 'wordpress',
+        title: 'Wordpress',
       },
     ],
   },
@@ -229,23 +233,19 @@ export const CARDS_DATA: InterfaceCardProps[] = [
     ],
   },
   {
-    image: ImageUIKit,
-    title: '@trejocode/uikit',
-    url: 'https://www.npmjs.com/package/@trejocode/uikit',
+    image: ImageWUIKIT,
+    title: 'Woonkly UIKit',
+    url: 'https://uikit.woonkly.com',
     description:
-      'Biblioteca de componentes UI reutilizables para proyectos personales ayuda a crear interfaces de usuario más rápido.',
+      'Woonkly UIKit es una biblioteca de componentes reutilizables que ayuda a los colaboradores de Woonkly a crear interfaces de usuario más rápido.',
     tags: [
       {
         type: 'web',
         title: 'Web',
       },
       {
-        type: 'infra',
-        title: 'Infraestructura',
-      },
-      {
-        type: 'open',
-        title: 'Open Source',
+        type: 'design',
+        title: 'Diseño Web',
       },
     ],
   },
@@ -377,19 +377,19 @@ export const CARDS_DATA: InterfaceCardProps[] = [
     ],
   },
   {
-    image: ImageCopperBranch,
-    title: 'Eat Copper Branch',
-    url: 'https://www.eatcopperbranch.com',
+    image: ImageMontemar,
+    title: 'Montemar Menú',
+    url: 'https://montemar.com.mx/menu/',
     description:
-      'Wordpress Site. Los restaurantes de Copper Branch ofrecen un menú vegano a base de plantas y superalimentos.',
+      'Menu interactivo, Montemar a la altura de los mejores Restaurantes de México, es el resultado de una visión mas allá de lo convencional.',
     tags: [
       {
         type: 'web',
         title: 'Web',
       },
       {
-        type: 'wordpress',
-        title: 'Wordpress',
+        type: 'design',
+        title: 'Diseño Web',
       },
     ],
   },

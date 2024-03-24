@@ -9,7 +9,7 @@ import { openInNewTab } from 'utils/openTab';
 
 // Images
 import ImageBanner from 'assets/images/hero.png';
-import ImageWoonkly from 'assets/images/woonkly.svg';
+import ImageTraxion from 'assets/images/traxion.svg';
 import ImageSuperProf from 'assets/images/superprof.svg';
 import ImageGitHub from 'assets/images/github-text.svg';
 
@@ -26,7 +26,7 @@ const Banner = (): JSX.Element => {
             </span>
           </h1>
           <h2 className="text-center lg:text-left text-xl xl:text-2xl font-semibold text-secondaryAlt-base mb-1">
-            Desarrollo increíbles aplicaciones Web y móviles
+            Desarrollo increíbles aplicaciones Web y móviles.
           </h2>
           <h2 className="text-center lg:text-left text-xl xl:text-2xl font-semibold text-secondaryAlt-base">
             Rápidas, intuitivas y autoadministrables
@@ -74,28 +74,20 @@ const Banner = (): JSX.Element => {
         </div>
         <div className="w-full flex justify-center items-center my-4">
           <a
-            href="https://woonkly.com"
+            href="https://traxion.global/"
             target="_blank"
             rel="nofollow noreferrer"
-            className="mr-4 lg:mr-2 rounded focus:outline-dashed focus:outline-2 focus:outline-info-base"
+            className="mr-4 lg:mr-4 rounded focus:outline-dashed focus:outline-2 focus:outline-info-base"
           >
-            <Image src={ImageWoonkly} width={100} height={24} alt="Woonkly logo" />
+            <Image src={ImageTraxion} width={108} alt="Grupo Traxión logo" />
           </a>
           <a
-            href="https://bit.ly/3ngHBR7"
+            href="https://bit.ly/4cwF9xC"
             target="_blank"
             rel="nofollow noreferrer"
-            className="mr-4 lg:mr-2 rounded focus:outline-dashed focus:outline-2 focus:outline-info-base"
-          >
-            <Image src={ImageSuperProf} width={120} height={24} alt="Superprof logo" />
-          </a>
-          <a
-            href="https://github.com/trejocode"
-            target="_blank"
-            rel="follow noreferrer"
             className="rounded focus:outline-dashed focus:outline-2 focus:outline-info-base"
           >
-            <Image src={ImageGitHub} alt="Github logo" />
+            <Image src={ImageSuperProf} width={120} height={24} alt="Superprof logo" />
           </a>
         </div>
       </div>

@@ -46,22 +46,22 @@ const About = (): JSX.Element => (
             <span className="font-semibold mr-1">Actualidad: </span>
             <span className="flex flex-row">
               <a
-                href="https://www.woonkly.com"
+                href="https://traxion.global/"
                 target="_blank"
                 rel="nofollow noreferrer"
                 className="flex flex-row items-center w-auto"
               >
-                <span className="mr-1">Woonkly</span>
+                <span className="mr-1">Traxión</span>
                 <Icon icon="ExternalLink" size={16} className="stroke-secondary-base" aria-hidden />
               </a>
-              <span className="ml-1">- Ssr Frontend Developer</span>
+              <span className="ml-1">- Sr React Native Developer</span>
             </span>
           </p>
           <p className="flex flex-row flex-wrap font-medium text-base md:text-lg text-secondary-base mb-6">
             <span className="font-semibold mr-1">Mentorías: </span>
             <span className="flex flex-row">
               <a
-                href="https://bit.ly/3ngHBR7"
+                href="https://bit.ly/4cwF9xC"
                 target="_blank"
                 rel="nofollow noreferrer"
                 className="flex flex-row items-center w-auto"
@@ -74,16 +74,18 @@ const About = (): JSX.Element => (
           </p>
           <h3 className="font-bold text-2xl text-secondary-base mb-6">
             <span className="text-primaryAlt-base">{'{'} </span>
-            2023
+            2024
             <span className="text-primaryAlt-base"> {'}'}</span>
           </h3>
           <p className="font-medium text-base md:text-lg text-secondary-base mb-4">
-            - Convertirme en Blockchain Developer, hola Web 3.0
+            - Convertirme en Android/iOS Developer
           </p>
           <p className="font-medium text-base md:text-lg text-secondary-base mb-4">
             - Dominar Accesibilidad Web, ninguna discapacidad debe limitar la Web
           </p>
-          <p className="font-medium text-base md:text-lg text-secondary-base mb-4">- Empezar en el idioma Portugués</p>
+          <p className="font-medium text-base md:text-lg text-secondary-base mb-4">
+            - Obtener el certificado C1 en Inglés
+          </p>
         </div>
       </div>
     </div>
