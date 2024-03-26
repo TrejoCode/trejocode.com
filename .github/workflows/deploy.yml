@@ -10,11 +10,11 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [20.x]
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: 💻 Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
@@ -33,5 +33,3 @@ jobs:
 
       - run: npm install
       - run: npm run build
-      - run: pm2 restart trejocode.com
-      - run: pm2 save
