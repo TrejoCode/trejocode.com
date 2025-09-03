@@ -2,7 +2,7 @@
 
 # 🌐 Trejocode.com - Sitio Web
 
-Sitio Web oficial de trejocode.com - Construido en Next.js y servido estáticamente 📄
+Sitio Web oficial de trejocode.com - Construido en Next.js
 
 ---
 
@@ -15,7 +15,6 @@ Trejocode.com Official Website - Built in Next.js and statically served
 - Carga de imágenes difereidas / Lazy Load for Images
 - Optimizado para SEO / SEO Ready
 - Esenciales WCAG 2.1 para la accesibilidad Web / Essential WCAG 2.1 for Web accessibility
-- Código documentado / Documented code
 - Estructura de carpetas / Folder structure
 - Última versión mayor de React y Next.js / React and Next.js latest version.
 
@@ -28,22 +27,34 @@ Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento 
 These instructions will provide you with a copy of the running project on your local machine for development purposes. See the implementation section for notes on how to deploy the project into production.
 
 ```bash
-cd web
+cd trejocode.com
 npm install
 npm run dev
 ```
 
 ### 📐 Requisitos / Requirements
 
-- Node min: 16
+- Node min: 20
 - Web Browser
 - Text Editor
 
-### 📦 Construido con / Build with
+### 📄 Envs
 
-- [Next.js](https://nextjs.org)
-- [TailwindCSS](https://tailwindcss.com/)
-- [Trejocode UIKit](https://www.npmjs.com/package/react-cool-img)
+```
+NEXT_PUBLIC_EMAILJS_SERVICE_ID
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+NEXT_PUBLIC_HCAPTCHA
+NEXT_PUBLIC_POSTHOG_KEY
+NEXT_PUBLIC_POSTHOG_HOST
+```
+
+### 🚀 Deploy
+
+```bash
+npm run build
+npm run start
+```
 
 ### 🤝 Colaboradores / Collaborators
 
