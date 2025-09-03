@@ -22,6 +22,7 @@ const Services = () => {
                 autoPlay
                 muted
                 loop
+                playsInline
                 className="w-full rounded-2xl rounded-br-none rounded-bl-none xl:w-auto xl:rounded-br-3xl xl:rounded-bl-3xl"
               >
                 <source src={video} type="video/mp4" />
