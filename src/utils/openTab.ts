@@ -1,5 +1,5 @@
 /**
- * @description Función para abrir un enlace en otra pestaña
+ * @description Abrir un enlace en otra pestaña
  */
 
 export const openInNewTab = (url: string): void => {

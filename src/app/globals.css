@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --font-sans: "IBM Plex Sans", "sans-serif";
+  --color-primary-base: #3E816D;
+  --color-primary-darken: #316757;
+  --color-primary-lighten: #649A8A;
+  --color-primary-alt-base: #288091;
+  --color-primary-alt-darken: #206674;
+  --color-primary-alt-lighten: #5299A7;
+  --color-secondary-base: #263D54;
+  --color-secondary-darken: #1E3043;
+  --color-secondary-lighten: #516376;
+  --color-secondary-alt-base: #516376;
+  --color-secondary-alt-darken: #404F5E;
+  --color-secondary-alt-lighten: #738291;
+  --color-success-base: #008537;
+  --color-success-darken: #006A2C;
+  --color-success-lighten: #329D5E;
+  --color-warning-base: #706700;
+  --color-warning-darken: #595200;
+  --color-warning-lighten: #8C8532;
+  --color-danger-base: #C0392B;
+  --color-danger-darken: #992D22;
+  --color-danger-lighten: #CC6055;
+  --color-info-base: #207B8D;
+  --color-info-darken: #196270;
+  --color-info-lighten: #4C95A3;
+  --color-gray: #6c6c6c;
+  --color-dark-gray: #4b4b4b;
+  --text-display-1: 6rem;
+  --text-display-2: 5.5rem;
+  --text-display-3: 4.5rem;
+  --text-display-4: 3.5rem;
+}
+
+@utility container {
+  padding-inline: 1rem;
+  @variant md {
+    padding-inline: 2rem;
+  }
+  @variant lg {
+    padding-inline: 2rem;
+  }
+  @variant xl {
+    padding-inline: 2rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+  transition-timing-function: ease-out;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-fill-mode: both;
+}
+

@@ -1,15 +1,6 @@
-/**
- * @description Datos de muestra para licencias
- */
+import type { TypeLicense } from 'app/licencias/model';
 
-export interface InterfaceLicense {
-  title: string;
-  url: string;
-  author: string;
-  link: string;
-}
-
-export const LICENSES_DATA: InterfaceLicense[] = [
+export const LICENSES_DATA: TypeLicense[] = [
   {
     title: 'Feather Icons',
     url: 'https://feathericons.com/',
