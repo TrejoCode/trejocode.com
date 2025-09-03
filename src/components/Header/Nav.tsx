@@ -1,181 +1,88 @@
-/**
- * @description Componente <Nav>
- */
-import { useState, useEffect, useRef } from 'react';
+'use client';
+
 import { Icon } from '@trejocode/uikit';
-import useWindowDimensions from 'hooks/useWindowDimension';
-// Imágenes
-import SvgLinkedIn from 'assets/svg/LinkedIn';
-import SvgFacebook from 'assets/svg/Facebook';
-import SvgYoutube from 'assets/svg/Youtube';
-import SvgInstagram from 'assets/svg/Instagram';
+import { Icon as CustomIcon } from 'components/Icon/Icon';
+import { useHeaderController } from './Header.controller';
 
-// Enlaces de navegación
-import navigationData from './data.json';
-
-const Nav = (): JSX.Element => {
-  const { navigation } = navigationData;
-  const { width } = useWindowDimensions();
-  const closeRef = useRef<HTMLButtonElement>(null);
-  const [openMenu, setOpenMenu] = useState<boolean>(false);
-
-  /**
-   * Escuchar todos los cambios del window "width", previene mostrar el menú al ajustar la ventana
-   */
-  useEffect(() => {
-    if (width && width > 768) {
-      setOpenMenu(false);
-    }
-  }, [width]);
-
-  /**
-   * Al abrir el menú enfocar el botón de cerrar, para mejorar la accesibilidad
-   */
-  useEffect(() => {
-    if (openMenu) {
-      closeRef?.current?.focus();
-    }
-  }, [openMenu]);
+const Nav = () => {
+  const { isMenuOpen, setIsMenuOpen, navigationData, closeButtonRef, socialData } = useHeaderController();
 
   return (
     <nav className="__navigation flex items-center" role="navigation">
       <ul className="flex items-center">
-        {/** Hamburger/Close menu icons */}
         <button
           type="button"
-          className="flex items-center w-8 h-8 md:hidden rounded focus:ring focus:ring-primary-base focus:outline-none"
-          onClick={() => setOpenMenu((prevSate) => !prevSate)}
-          aria-expanded={openMenu}
+          className="focus:ring-primary-base flex h-8 w-8 items-center rounded-sm focus:ring-3 focus:outline-hidden md:hidden"
+          onClick={() => setIsMenuOpen((prevSate) => !prevSate)}
+          aria-expanded={isMenuOpen}
           aria-label="Abrir menú de navegación"
         >
           <span role="img" aria-hidden>
-            <Icon icon="Menu" size={32} className="stroke-black" />
+            <Icon icon="Menu" size={32} color="#000000" />
           </span>
         </button>
         <div
           className={`flex ${
-            openMenu && 'fadeIn z-10 w-full flex-col fixed min-h-screen bg-secondary-base top-0 left-0'
-          } md:static md:flex-row md:min-h-max`}
+            isMenuOpen && 'fadeIn bg-secondary-base fixed top-0 left-0 z-10 min-h-screen w-full flex-col'
+          } md:static md:min-h-max md:flex-row`}
         >
-          {openMenu && (
-            <div className="w-full flex justify-end items-center px-4 h-20">
+          {isMenuOpen && (
+            <div className="flex h-20 w-full items-center justify-end px-4">
               <button
-                ref={closeRef}
+                ref={closeButtonRef}
                 type="button"
-                className="w-8 h-8 md:hidden rounded focus:ring focus:ring-primary-base focus:outline-none"
+                className="focus:ring-primary-base h-8 w-8 rounded-sm focus:ring-3 focus:outline-hidden md:hidden"
                 aria-label="Cerrrar menú de navegación"
-                onClick={() => setOpenMenu((prevSate) => !prevSate)}
+                onClick={() => setIsMenuOpen((prevSate) => !prevSate)}
               >
                 <span role="img" aria-hidden>
-                  <Icon icon="X" size={32} className="stroke-white" />
+                  <Icon icon="X" size={32} color="#ffffff" />
                 </span>
               </button>
             </div>
           )}
-          {/** Navigation links */}
-          <div className={`hidden md:flex ${openMenu ? '!flex flex-col' : 'flex-row items-center'}`}>
-            {navigation?.map(({ id, title, url }) => (
-              <li key={id} className={`focus:outline-none ${openMenu && 'my-4 pr-6 last:mb-8 text-right'}`}>
+          <div className={`hidden md:flex ${isMenuOpen ? '!flex flex-col' : 'flex-row items-center'}`}>
+            {navigationData?.map(({ id, title, url }) => (
+              <li key={id} className={`focus:outline-hidden ${isMenuOpen && 'my-4 pr-6 text-right last:mb-8'}`}>
                 <a
                   href={url}
-                  className={`px-3 duration-150 transition-colors font-semibold outline-2 focus:outline-dashed focus:outline-info-base rounded ${
-                    openMenu
-                      ? 'text-lg text-white focus:outline-white'
-                      : 'text-base text-secondary-base hover:text-primary-lighten'
-                  }   focus:text-primary-lighten`}
+                  className={`focus:outline-info-base rounded-sm font-semibold outline-2 outline-transparent transition-colors duration-150 focus:outline-dashed ${
+                    isMenuOpen
+                      ? 'px-0 text-lg text-white focus:outline-white'
+                      : 'text-secondary-base hover:text-primary-lighten px-3 text-base'
+                  } focus:text-primary-lighten`}
                 >
                   {title}
                 </a>
               </li>
             ))}
           </div>
-          {/** Social links */}
-          <div className={`hidden md:flex ${openMenu ? '!flex flex-row justify-end mr-4' : 'flex-row items-center'}`}>
-            <li className="px-2 focus:outline-none">
-              <a
-                href="https://www.linkedin.com/in/trejocode"
-                target="_blank"
-                rel="follow noreferrer"
-                className={`flex items-center rounded focus:outline-none focus:ring ${
-                  openMenu ? 'focus:ring-white' : ' focus:ring-info-base'
-                }`}
-                aria-label="Abir enlace externo de LinkedIn"
-              >
-                <span role="img" aria-hidden>
-                  <SvgLinkedIn
-                    title="LinkedIn icon"
-                    width={openMenu ? 32 : 18}
-                    height={openMenu ? 32 : 18}
-                    ariaLabelId="linkedin-icon"
-                    classNames={openMenu ? 'fill-white' : 'fill-primaryAlt-base'}
-                  />
-                </span>
-              </a>
-            </li>
-            <li className="px-2">
-              <a
-                href="https://www.facebook.com/TrejoCode"
-                target="_blank"
-                rel="follow noreferrer"
-                className={`flex items-center rounded focus:outline-none focus:ring ${
-                  openMenu ? 'focus:ring-white' : ' focus:ring-info-base'
-                }`}
-                aria-label="Abir enlace externo de Facebook"
-              >
-                <span role="img" aria-hidden>
-                  <SvgFacebook
-                    title="Facebook icon"
-                    width={openMenu ? 32 : 18}
-                    height={openMenu ? 32 : 18}
-                    ariaLabelId="facebook-icon"
-                    classNames={openMenu ? 'fill-white' : 'fill-primaryAlt-base'}
-                  />
-                </span>
-              </a>
-            </li>
-            <li className="px-2">
-              <a
-                href="https://www.youtube.com/trejocode"
-                target="_blank"
-                rel="follow noreferrer"
-                className={`flex items-center rounded focus:outline-none focus:ring ${
-                  openMenu ? 'focus:ring-white' : ' focus:ring-info-base'
-                }`}
-                aria-label="Abir enlace externo de youtube"
-              >
-                <span role="img" aria-hidden>
-                  <SvgYoutube
-                    title="Youtube icon"
-                    width={openMenu ? 32 : 18}
-                    height={openMenu ? 32 : 18}
-                    ariaLabelId="youtube-icon"
-                    classNames={openMenu ? 'fill-white' : 'fill-primaryAlt-base'}
-                  />
-                </span>
-              </a>
-            </li>
-            <li className="px-2">
-              <a
-                href="https://www.instagram.com/trejocode"
-                target="_blank"
-                rel="follow noreferrer"
-                className={`flex items-center rounded focus:outline-none focus:ring ${
-                  openMenu ? 'focus:ring-white' : ' focus:ring-info-base'
-                }`}
-                aria-label="Abir enlace externo de Instagram"
-              >
-                <span role="img" aria-hidden>
-                  <SvgInstagram
-                    title="Instagram icon"
-                    width={openMenu ? 32 : 18}
-                    height={openMenu ? 32 : 18}
-                    ariaLabelId="instagram-icon"
-                    classNames={openMenu ? 'fill-white' : 'fill-primaryAlt-base'}
-                  />
-                </span>
-              </a>
-            </li>
-          </div>
+          <ul className={`hidden md:flex ${isMenuOpen ? 'mr-4 !flex flex-row justify-end' : 'flex-row items-center'}`}>
+            {socialData?.map(({ id, title, url, icon }) => (
+              <li key={id} className="px-2 focus:outline-hidden">
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="follow noreferrer"
+                  className={`flex items-center rounded-sm outline-2 outline-transparent focus:outline-dashed ${
+                    isMenuOpen ? 'focus:outline-white' : 'focus:outline-info-base'
+                  }`}
+                  aria-label={`Abir enlace externo de ${title}`}
+                >
+                  <span role="img" aria-hidden>
+                    <CustomIcon
+                      name={icon}
+                      title={`${title} icono`}
+                      width={isMenuOpen ? 32 : 18}
+                      height={isMenuOpen ? 32 : 18}
+                      ariaLabelId={`${title}-icon`}
+                      classNames={isMenuOpen ? 'fill-white' : 'fill-primary-alt-base'}
+                    />
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </ul>
     </nav>

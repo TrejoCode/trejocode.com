@@ -1,46 +1,40 @@
-/**
- * @description Componente <Projects /> de la página de inicio
- */
+'use client';
 
-import { useState } from 'react';
 import { Button } from '@trejocode/uikit';
-import CardProject from 'components/Cards/Projects';
-import { CARDS_DATA } from 'components/Cards/Projects/data';
+import CardProject from 'components/Cards/Project/Project';
+import { useHomeController } from 'controllers/home/controller';
 
-// Carga inicial de datos
-const INITIAL_LIMIT: number = 9;
-
-const Projects = (): JSX.Element => {
-  const [limit, setLimit] = useState<number>(INITIAL_LIMIT);
+const Projects = () => {
+  const { projects, projectLimit, setProjectLimit, initialLimit } = useHomeController();
 
   return (
-    <div className="w-full flex justify-center bg-[#EBF3F5] py-16 pb-6 lg:py-24 lg:pb-4" id="proyectos">
+    <div className="flex w-full justify-center bg-[#EBF3F5] py-16 pb-6 lg:py-24 lg:pb-4" id="proyectos">
       <div className="container flex flex-col">
-        <div className="flex flex-col mb-16">
-          <h2 className="text-center text-5xl font-bold xl:text-display-4 text-secondary-base mb-4">
+        <div className="mb-16 flex flex-col">
+          <h2 className="xl:text-display-4 text-secondary-base mb-4 text-center text-5xl font-bold">
             <span className="text-primary-base animate-pulse">_</span>
             Proyectos
           </h2>
-          <p className="text-center text-lg text-secondary-base font-medium">
+          <p className="text-secondary-base text-center text-lg font-medium">
             Colección de proyectos en los que he trabajado en mi trayectoria como desarrollador esto es lo que hago y
             amo hacer.
           </p>
         </div>
-        <div className="w-full flex flex-row flex-wrap justify-center gap-8">
-          {CARDS_DATA?.slice(0, limit)?.map((project, key) => (
+        <div className="flex w-full flex-row flex-wrap justify-center gap-8">
+          {projects.slice(0, projectLimit)?.map((project, key) => (
             <CardProject
               key={key}
+              url={project?.url}
+              tags={project?.tags}
               image={project?.image}
               title={project?.title}
-              url={project?.url}
               description={project?.description}
-              tags={project?.tags}
             />
           ))}
         </div>
-        <div className="w-full flex justify-center mt-8">
-          {limit === INITIAL_LIMIT && (
-            <Button color="primary" size="default" variation="filled" onClick={() => setLimit(CARDS_DATA.length)}>
+        <div className="mt-8 flex w-full justify-center">
+          {projectLimit === initialLimit && (
+            <Button color="primary" size="default" onClick={() => setProjectLimit(projects.length)}>
               Mostrar todos los proyectos
             </Button>
           )}
